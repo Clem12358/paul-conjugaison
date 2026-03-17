@@ -196,6 +196,8 @@ if "admin_authenticated" not in st.session_state:
     st.session_state.admin_authenticated = False
 if "select_all" not in st.session_state:
     st.session_state.select_all = False
+if "mistakes" not in st.session_state:
+    st.session_state.mistakes = []
 
 
 # --- Load verbs ---
@@ -344,6 +346,7 @@ def generate_questions(selected_verbs, selected_temps, nb_questions):
     st.session_state.score = 0
     st.session_state.total_answered = 0
     st.session_state.show_feedback = False
+    st.session_state.mistakes = []
 
 
 # ============================================================
@@ -427,6 +430,13 @@ def show_quiz():
                         st.session_state.feedback_type = "almost"
                     else:
                         st.session_state.feedback_type = "wrong"
+                        st.session_state.mistakes.append({
+                            "verbe": q["verbe"],
+                            "temps": q["temps"],
+                            "personne": q["personne"],
+                            "bonne_reponse": strip_pronoun(q["reponse"]),
+                            "ta_reponse": user_answer.strip()
+                        })
                     st.session_state.show_feedback = True
                     st.rerun()
                 else:
@@ -472,6 +482,42 @@ def show_results():
         f'</div>',
         unsafe_allow_html=True
     )
+
+    # --- Recap des erreurs ---
+    mistakes = st.session_state.mistakes
+    if mistakes:
+        st.write("")
+        st.markdown("### 📝 Tes erreurs")
+        st.markdown("Voici les reponses a retenir :")
+
+        for m in mistakes:
+            st.markdown(
+                f'<div class="error-box" style="text-align:left;font-size:1.1rem;">'
+                f'<b>{m["personne"].capitalize()}</b> ... ({m["verbe"]}, {m["temps"]})<br>'
+                f'❌ Ta reponse : <i>{m["ta_reponse"]}</i><br>'
+                f'✅ Bonne reponse : <b>{m["bonne_reponse"]}</b>'
+                f'</div>',
+                unsafe_allow_html=True
+            )
+
+        # Verbes a retravailler
+        verbes_rates = list(set(m["verbe"] for m in mistakes))
+        temps_rates = list(set(m["temps"] for m in mistakes))
+
+        st.write("")
+        st.markdown(
+            f"**Verbes a retravailler :** {', '.join(v.capitalize() for v in sorted(verbes_rates))}"
+        )
+
+        if st.button("🎯 Retravailler mes erreurs", type="primary", use_container_width=True):
+            st.session_state.selected_verbs = verbes_rates
+            st.session_state.selected_temps = temps_rates
+            generate_questions(verbes_rates, temps_rates, min(20, len(verbes_rates) * len(temps_rates) * 6))
+            st.session_state.mode = "quiz"
+            st.rerun()
+    else:
+        st.write("")
+        st.markdown("### 🎉 Aucune erreur, bravo !")
 
     st.write("")
     st.write("")
