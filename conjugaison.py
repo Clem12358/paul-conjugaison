@@ -31,61 +31,62 @@ st.markdown("""
         padding: 0.7rem 2rem !important;
         border-radius: 12px !important;
     }
-    .question-card {
-        background: linear-gradient(135deg, #e0f2fe, #f0e6ff);
+    .question-card, .question-card * {
+        background: linear-gradient(135deg, #e0f2fe, #f0e6ff) !important;
         border-radius: 20px;
         padding: 2rem;
         margin: 1rem 0;
         text-align: center;
         font-size: 1.6rem;
         font-weight: bold;
-        color: #1e3a5f;
+        color: #1e3a5f !important;
         border: 3px solid #a5b4fc;
     }
-    .score-box {
+    .score-box, .score-box * {
         font-size: 1.4rem;
         font-weight: bold;
-        color: #2563eb;
+        color: #2563eb !important;
         text-align: right;
     }
-    .big-title {
+    .big-title, .big-title * {
         font-size: 2.5rem;
         text-align: center;
         font-weight: bold;
-        color: #7c3aed;
+        color: #7c3aed !important;
         margin-bottom: 0.5rem;
     }
-    .subtitle {
+    .subtitle, .subtitle * {
         font-size: 1.2rem;
         text-align: center;
-        color: #6b7280;
+        color: #9ca3af !important;
         margin-bottom: 2rem;
     }
-    .success-box {
-        background: #d1fae5;
+    .success-box, .success-box * {
+        background: #d1fae5 !important;
         border: 2px solid #34d399;
         border-radius: 15px;
         padding: 1.5rem;
         text-align: center;
         font-size: 1.3rem;
-        color: #065f46;
+        color: #065f46 !important;
         margin: 1rem 0;
     }
-    .error-box {
-        background: #fef3c7;
+    .error-box, .error-box * {
+        background: #fef3c7 !important;
         border: 2px solid #fbbf24;
         border-radius: 15px;
         padding: 1.5rem;
         text-align: center;
         font-size: 1.3rem;
-        color: #92400e;
+        color: #92400e !important;
         margin: 1rem 0;
     }
-    .result-box {
-        background: linear-gradient(135deg, #fdf2f8, #ede9fe);
+    .result-box, .result-box * {
+        background: linear-gradient(135deg, #fdf2f8, #ede9fe) !important;
         border-radius: 20px;
         padding: 2rem;
         text-align: center;
+        color: #581c87 !important;
         border: 3px solid #c084fc;
     }
 </style>
