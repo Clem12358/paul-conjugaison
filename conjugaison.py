@@ -133,6 +133,20 @@ def delete_verb(infinitif):
 
 
 # --- Answer comparison ---
+PRONOUN_PREFIXES = [
+    "je ", "j'", "tu ", "il ", "elle ", "nous ", "vous ", "ils ", "elles ",
+]
+
+
+def strip_pronoun(text):
+    """Remove the subject pronoun from a full conjugation like 'tu chantes' -> 'chantes'."""
+    t = text.strip().lower()
+    for prefix in PRONOUN_PREFIXES:
+        if t.startswith(prefix):
+            return t[len(prefix):].strip()
+    return t
+
+
 def normalize(text):
     text = text.strip().lower()
     text = text.replace("\u2019", "'").replace("\u2018", "'")
@@ -149,8 +163,9 @@ def strip_accents(text):
 
 
 def check_answer(user_input, expected):
+    """Compare user input against expected answer, stripping the pronoun from expected."""
     u = normalize(user_input)
-    e = normalize(expected)
+    e = normalize(strip_pronoun(expected))
     if u == e:
         return "correct"
     if strip_accents(u) == strip_accents(e):
@@ -403,7 +418,7 @@ def show_quiz():
                 if user_answer.strip():
                     result = check_answer(user_answer, q["reponse"])
                     st.session_state.total_answered += 1
-                    st.session_state.feedback_answer = q["reponse"]
+                    st.session_state.feedback_answer = strip_pronoun(q["reponse"])
                     if result == "correct":
                         st.session_state.score += 1
                         st.session_state.feedback_type = "correct"
