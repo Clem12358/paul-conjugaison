@@ -227,14 +227,39 @@ def show_selection():
 
     verbes_list = sorted(verbes_data.keys())
 
+    # --- Selection des temps ---
+    st.markdown("**Quels temps veux-tu reviser ?**")
+    col_t1, col_t2 = st.columns(2)
+    with col_t1:
+        if st.button("✅ Tous les temps"):
+            for t in TEMPS:
+                st.session_state[f"ct_{t}"] = True
+            st.rerun()
+    with col_t2:
+        if st.button("❌ Aucun temps"):
+            for t in TEMPS:
+                st.session_state[f"ct_{t}"] = False
+            st.rerun()
+
+    selected_temps = []
+    cols_t = st.columns(len(TEMPS))
+    for i, temps in enumerate(TEMPS):
+        with cols_t[i]:
+            if st.checkbox(temps.capitalize(), value=True, key=f"ct_{temps}"):
+                selected_temps.append(temps)
+
+    st.write("")
+
+    # --- Selection des verbes ---
+    st.markdown("**Quels verbes veux-tu reviser ?**")
     col1, col2 = st.columns(2)
     with col1:
-        if st.button("✅ Tout selectionner"):
+        if st.button("✅ Tous les verbes"):
             for verbe in verbes_list:
                 st.session_state[f"cb_{verbe}"] = True
             st.rerun()
     with col2:
-        if st.button("❌ Tout deselectionner"):
+        if st.button("❌ Aucun verbe"):
             for verbe in verbes_list:
                 st.session_state[f"cb_{verbe}"] = False
             st.rerun()
@@ -249,16 +274,34 @@ def show_selection():
 
     st.write("")
 
+    # --- Nombre de questions ---
+    max_possible = len(selected) * len(selected_temps) * len(PERSONNES)
+    st.markdown("**Combien de questions ?**")
+    if max_possible > 0:
+        nb_questions = st.slider(
+            "Nombre de questions :",
+            min_value=5,
+            max_value=max_possible,
+            value=min(20, max_possible),
+            step=5
+        )
+    else:
+        nb_questions = 0
+
+    st.write("")
+
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
-        if len(selected) > 0:
+        if len(selected) > 0 and len(selected_temps) > 0:
             if st.button("🎯 C'est parti !", type="primary", use_container_width=True):
                 st.session_state.selected_verbs = selected
-                generate_questions(selected)
+                st.session_state.selected_temps = selected_temps
+                st.session_state.nb_questions = nb_questions
+                generate_questions(selected, selected_temps, nb_questions)
                 st.session_state.mode = "quiz"
                 st.rerun()
         else:
-            st.info("Coche au moins un verbe pour commencer !")
+            st.info("Coche au moins un verbe et un temps pour commencer !")
 
     st.write("")
     if st.button("⬅️ Retour"):
@@ -266,22 +309,22 @@ def show_selection():
         st.rerun()
 
 
-def generate_questions(selected_verbs):
-    questions = []
+def generate_questions(selected_verbs, selected_temps, nb_questions):
+    all_questions = []
     for verbe in selected_verbs:
         data = verbes_data[verbe]
-        for temps in TEMPS:
+        for temps in selected_temps:
             if temps in data:
                 for personne in PERSONNES:
                     if personne in data[temps]:
-                        questions.append({
+                        all_questions.append({
                             "verbe": verbe,
                             "temps": temps,
                             "personne": personne,
                             "reponse": data[temps][personne]
                         })
-    random.shuffle(questions)
-    st.session_state.questions = questions
+    random.shuffle(all_questions)
+    st.session_state.questions = all_questions[:nb_questions]
     st.session_state.current_q = 0
     st.session_state.score = 0
     st.session_state.total_answered = 0
@@ -421,7 +464,11 @@ def show_results():
     col1, col2, col3 = st.columns(3)
     with col1:
         if st.button("🔄 Recommencer", use_container_width=True):
-            generate_questions(st.session_state.selected_verbs)
+            generate_questions(
+                st.session_state.selected_verbs,
+                st.session_state.get("selected_temps", TEMPS),
+                st.session_state.get("nb_questions", 20)
+            )
             st.session_state.mode = "quiz"
             st.rerun()
     with col2:
