@@ -230,11 +230,13 @@ def show_selection():
     col1, col2 = st.columns(2)
     with col1:
         if st.button("✅ Tout selectionner"):
-            st.session_state.select_all = True
+            for verbe in verbes_list:
+                st.session_state[f"cb_{verbe}"] = True
             st.rerun()
     with col2:
         if st.button("❌ Tout deselectionner"):
-            st.session_state.select_all = False
+            for verbe in verbes_list:
+                st.session_state[f"cb_{verbe}"] = False
             st.rerun()
 
     selected = []
@@ -242,8 +244,7 @@ def show_selection():
     cols = st.columns(nb_cols)
     for i, verbe in enumerate(verbes_list):
         with cols[i % nb_cols]:
-            default = st.session_state.select_all
-            if st.checkbox(verbe.capitalize(), value=default, key=f"cb_{verbe}"):
+            if st.checkbox(verbe.capitalize(), key=f"cb_{verbe}"):
                 selected.append(verbe)
 
     st.write("")
