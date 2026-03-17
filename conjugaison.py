@@ -225,6 +225,13 @@ def show_accueil():
             st.rerun()
 
     st.write("")
+
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        if st.button("📖 Voir les verbes", use_container_width=True):
+            st.session_state.mode = "consulter"
+            st.rerun()
+
     st.write("")
     st.write("")
 
@@ -693,6 +700,54 @@ def show_admin_edit():
 
 
 # ============================================================
+# CONSULTER LES VERBES
+# ============================================================
+def show_consulter():
+    st.markdown('<div class="big-title">📖 Les verbes</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">Choisis un verbe pour voir ses conjugaisons</div>', unsafe_allow_html=True)
+
+    verbes_list = sorted(verbes_data.keys())
+
+    selected_verb = st.selectbox(
+        "Verbe :",
+        verbes_list,
+        format_func=lambda x: x.capitalize()
+    )
+
+    if selected_verb:
+        verb_data = verbes_data[selected_verb]
+
+        for temps in TEMPS:
+            current_data = verb_data.get(temps, {})
+            if not current_data:
+                continue
+
+            st.markdown(
+                f'<div class="question-card" style="font-size:1.2rem;padding:1rem;margin:0.5rem 0;">'
+                f'<b>{temps.capitalize()}</b></div>',
+                unsafe_allow_html=True
+            )
+
+            col1, col2 = st.columns(2)
+            for i, personne in enumerate(PERSONNES):
+                reponse = current_data.get(personne, "")
+                conjugaison = strip_pronoun(reponse)
+                with (col1 if i < 3 else col2):
+                    st.markdown(
+                        f'<div style="font-size:1.2rem;padding:0.3rem 0;">'
+                        f'<b>{personne.capitalize()}</b> '
+                        f'<span style="color:#7c3aed;">{conjugaison}</span>'
+                        f'</div>',
+                        unsafe_allow_html=True
+                    )
+
+    st.write("")
+    if st.button("⬅️ Retour"):
+        st.session_state.mode = "accueil"
+        st.rerun()
+
+
+# ============================================================
 # ROUTER
 # ============================================================
 mode = st.session_state.mode
@@ -703,6 +758,8 @@ elif mode == "selection":
     show_selection()
 elif mode == "quiz":
     show_quiz()
+elif mode == "consulter":
+    show_consulter()
 elif mode == "admin":
     show_admin()
 else:
