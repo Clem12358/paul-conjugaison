@@ -731,12 +731,10 @@ def show_consulter():
             col1, col2 = st.columns(2)
             for i, personne in enumerate(PERSONNES):
                 reponse = current_data.get(personne, "")
-                conjugaison = strip_pronoun(reponse)
                 with (col1 if i < 3 else col2):
                     st.markdown(
                         f'<div style="font-size:1.2rem;padding:0.3rem 0;">'
-                        f'<b>{personne.capitalize()}</b> '
-                        f'<span style="color:#7c3aed;">{conjugaison}</span>'
+                        f'<span style="color:#7c3aed;">{reponse}</span>'
                         f'</div>',
                         unsafe_allow_html=True
                     )
