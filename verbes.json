@@ -1,0 +1,750 @@
+{
+  "être": {
+    "présent": {
+      "je": "je suis",
+      "tu": "tu es",
+      "il/elle": "il est",
+      "nous": "nous sommes",
+      "vous": "vous êtes",
+      "ils/elles": "ils sont"
+    },
+    "imparfait": {
+      "je": "j'étais",
+      "tu": "tu étais",
+      "il/elle": "il était",
+      "nous": "nous étions",
+      "vous": "vous étiez",
+      "ils/elles": "ils étaient"
+    },
+    "futur": {
+      "je": "je serai",
+      "tu": "tu seras",
+      "il/elle": "il sera",
+      "nous": "nous serons",
+      "vous": "vous serez",
+      "ils/elles": "ils seront"
+    },
+    "passé composé": {
+      "je": "j'ai été",
+      "tu": "tu as été",
+      "il/elle": "il a été",
+      "nous": "nous avons été",
+      "vous": "vous avez été",
+      "ils/elles": "ils ont été"
+    }
+  },
+  "avoir": {
+    "présent": {
+      "je": "j'ai",
+      "tu": "tu as",
+      "il/elle": "il a",
+      "nous": "nous avons",
+      "vous": "vous avez",
+      "ils/elles": "ils ont"
+    },
+    "imparfait": {
+      "je": "j'avais",
+      "tu": "tu avais",
+      "il/elle": "il avait",
+      "nous": "nous avions",
+      "vous": "vous aviez",
+      "ils/elles": "ils avaient"
+    },
+    "futur": {
+      "je": "j'aurai",
+      "tu": "tu auras",
+      "il/elle": "il aura",
+      "nous": "nous aurons",
+      "vous": "vous aurez",
+      "ils/elles": "ils auront"
+    },
+    "passé composé": {
+      "je": "j'ai eu",
+      "tu": "tu as eu",
+      "il/elle": "il a eu",
+      "nous": "nous avons eu",
+      "vous": "vous avez eu",
+      "ils/elles": "ils ont eu"
+    }
+  },
+  "aller": {
+    "présent": {
+      "je": "je vais",
+      "tu": "tu vas",
+      "il/elle": "il va",
+      "nous": "nous allons",
+      "vous": "vous allez",
+      "ils/elles": "ils vont"
+    },
+    "imparfait": {
+      "je": "j'allais",
+      "tu": "tu allais",
+      "il/elle": "il allait",
+      "nous": "nous allions",
+      "vous": "vous alliez",
+      "ils/elles": "ils allaient"
+    },
+    "futur": {
+      "je": "j'irai",
+      "tu": "tu iras",
+      "il/elle": "il ira",
+      "nous": "nous irons",
+      "vous": "vous irez",
+      "ils/elles": "ils iront"
+    },
+    "passé composé": {
+      "je": "je suis allé",
+      "tu": "tu es allé",
+      "il/elle": "il est allé",
+      "nous": "nous sommes allés",
+      "vous": "vous êtes allés",
+      "ils/elles": "ils sont allés"
+    }
+  },
+  "chanter": {
+    "présent": {
+      "je": "je chante",
+      "tu": "tu chantes",
+      "il/elle": "il chante",
+      "nous": "nous chantons",
+      "vous": "vous chantez",
+      "ils/elles": "ils chantent"
+    },
+    "imparfait": {
+      "je": "je chantais",
+      "tu": "tu chantais",
+      "il/elle": "il chantait",
+      "nous": "nous chantions",
+      "vous": "vous chantiez",
+      "ils/elles": "ils chantaient"
+    },
+    "futur": {
+      "je": "je chanterai",
+      "tu": "tu chanteras",
+      "il/elle": "il chantera",
+      "nous": "nous chanterons",
+      "vous": "vous chanterez",
+      "ils/elles": "ils chanteront"
+    },
+    "passé composé": {
+      "je": "j'ai chanté",
+      "tu": "tu as chanté",
+      "il/elle": "il a chanté",
+      "nous": "nous avons chanté",
+      "vous": "vous avez chanté",
+      "ils/elles": "ils ont chanté"
+    }
+  },
+  "finir": {
+    "présent": {
+      "je": "je finis",
+      "tu": "tu finis",
+      "il/elle": "il finit",
+      "nous": "nous finissons",
+      "vous": "vous finissez",
+      "ils/elles": "ils finissent"
+    },
+    "imparfait": {
+      "je": "je finissais",
+      "tu": "tu finissais",
+      "il/elle": "il finissait",
+      "nous": "nous finissions",
+      "vous": "vous finissiez",
+      "ils/elles": "ils finissaient"
+    },
+    "futur": {
+      "je": "je finirai",
+      "tu": "tu finiras",
+      "il/elle": "il finira",
+      "nous": "nous finirons",
+      "vous": "vous finirez",
+      "ils/elles": "ils finiront"
+    },
+    "passé composé": {
+      "je": "j'ai fini",
+      "tu": "tu as fini",
+      "il/elle": "il a fini",
+      "nous": "nous avons fini",
+      "vous": "vous avez fini",
+      "ils/elles": "ils ont fini"
+    }
+  },
+  "dire": {
+    "présent": {
+      "je": "je dis",
+      "tu": "tu dis",
+      "il/elle": "il dit",
+      "nous": "nous disons",
+      "vous": "vous dites",
+      "ils/elles": "ils disent"
+    },
+    "imparfait": {
+      "je": "je disais",
+      "tu": "tu disais",
+      "il/elle": "il disait",
+      "nous": "nous disions",
+      "vous": "vous disiez",
+      "ils/elles": "ils disaient"
+    },
+    "futur": {
+      "je": "je dirai",
+      "tu": "tu diras",
+      "il/elle": "il dira",
+      "nous": "nous dirons",
+      "vous": "vous direz",
+      "ils/elles": "ils diront"
+    },
+    "passé composé": {
+      "je": "j'ai dit",
+      "tu": "tu as dit",
+      "il/elle": "il a dit",
+      "nous": "nous avons dit",
+      "vous": "vous avez dit",
+      "ils/elles": "ils ont dit"
+    }
+  },
+  "faire": {
+    "présent": {
+      "je": "je fais",
+      "tu": "tu fais",
+      "il/elle": "il fait",
+      "nous": "nous faisons",
+      "vous": "vous faites",
+      "ils/elles": "ils font"
+    },
+    "imparfait": {
+      "je": "je faisais",
+      "tu": "tu faisais",
+      "il/elle": "il faisait",
+      "nous": "nous faisions",
+      "vous": "vous faisiez",
+      "ils/elles": "ils faisaient"
+    },
+    "futur": {
+      "je": "je ferai",
+      "tu": "tu feras",
+      "il/elle": "il fera",
+      "nous": "nous ferons",
+      "vous": "vous ferez",
+      "ils/elles": "ils feront"
+    },
+    "passé composé": {
+      "je": "j'ai fait",
+      "tu": "tu as fait",
+      "il/elle": "il a fait",
+      "nous": "nous avons fait",
+      "vous": "vous avez fait",
+      "ils/elles": "ils ont fait"
+    }
+  },
+  "entendre": {
+    "présent": {
+      "je": "j'entends",
+      "tu": "tu entends",
+      "il/elle": "il entend",
+      "nous": "nous entendons",
+      "vous": "vous entendez",
+      "ils/elles": "ils entendent"
+    },
+    "imparfait": {
+      "je": "j'entendais",
+      "tu": "tu entendais",
+      "il/elle": "il entendait",
+      "nous": "nous entendions",
+      "vous": "vous entendiez",
+      "ils/elles": "ils entendaient"
+    },
+    "futur": {
+      "je": "j'entendrai",
+      "tu": "tu entendras",
+      "il/elle": "il entendra",
+      "nous": "nous entendrons",
+      "vous": "vous entendrez",
+      "ils/elles": "ils entendront"
+    },
+    "passé composé": {
+      "je": "j'ai entendu",
+      "tu": "tu as entendu",
+      "il/elle": "il a entendu",
+      "nous": "nous avons entendu",
+      "vous": "vous avez entendu",
+      "ils/elles": "ils ont entendu"
+    }
+  },
+  "savoir": {
+    "présent": {
+      "je": "je sais",
+      "tu": "tu sais",
+      "il/elle": "il sait",
+      "nous": "nous savons",
+      "vous": "vous savez",
+      "ils/elles": "ils savent"
+    },
+    "imparfait": {
+      "je": "je savais",
+      "tu": "tu savais",
+      "il/elle": "il savait",
+      "nous": "nous savions",
+      "vous": "vous saviez",
+      "ils/elles": "ils savaient"
+    },
+    "futur": {
+      "je": "je saurai",
+      "tu": "tu sauras",
+      "il/elle": "il saura",
+      "nous": "nous saurons",
+      "vous": "vous saurez",
+      "ils/elles": "ils sauront"
+    },
+    "passé composé": {
+      "je": "j'ai su",
+      "tu": "tu as su",
+      "il/elle": "il a su",
+      "nous": "nous avons su",
+      "vous": "vous avez su",
+      "ils/elles": "ils ont su"
+    }
+  },
+  "vouloir": {
+    "présent": {
+      "je": "je veux",
+      "tu": "tu veux",
+      "il/elle": "il veut",
+      "nous": "nous voulons",
+      "vous": "vous voulez",
+      "ils/elles": "ils veulent"
+    },
+    "imparfait": {
+      "je": "je voulais",
+      "tu": "tu voulais",
+      "il/elle": "il voulait",
+      "nous": "nous voulions",
+      "vous": "vous vouliez",
+      "ils/elles": "ils voulaient"
+    },
+    "futur": {
+      "je": "je voudrai",
+      "tu": "tu voudras",
+      "il/elle": "il voudra",
+      "nous": "nous voudrons",
+      "vous": "vous voudrez",
+      "ils/elles": "ils voudront"
+    },
+    "passé composé": {
+      "je": "j'ai voulu",
+      "tu": "tu as voulu",
+      "il/elle": "il a voulu",
+      "nous": "nous avons voulu",
+      "vous": "vous avez voulu",
+      "ils/elles": "ils ont voulu"
+    }
+  },
+  "aimer": {
+    "présent": {
+      "je": "j'aime",
+      "tu": "tu aimes",
+      "il/elle": "il aime",
+      "nous": "nous aimons",
+      "vous": "vous aimez",
+      "ils/elles": "ils aiment"
+    },
+    "imparfait": {
+      "je": "j'aimais",
+      "tu": "tu aimais",
+      "il/elle": "il aimait",
+      "nous": "nous aimions",
+      "vous": "vous aimiez",
+      "ils/elles": "ils aimaient"
+    },
+    "futur": {
+      "je": "j'aimerai",
+      "tu": "tu aimeras",
+      "il/elle": "il aimera",
+      "nous": "nous aimerons",
+      "vous": "vous aimerez",
+      "ils/elles": "ils aimeront"
+    },
+    "passé composé": {
+      "je": "j'ai aimé",
+      "tu": "tu as aimé",
+      "il/elle": "il a aimé",
+      "nous": "nous avons aimé",
+      "vous": "vous avez aimé",
+      "ils/elles": "ils ont aimé"
+    }
+  },
+  "rendre": {
+    "présent": {
+      "je": "je rends",
+      "tu": "tu rends",
+      "il/elle": "il rend",
+      "nous": "nous rendons",
+      "vous": "vous rendez",
+      "ils/elles": "ils rendent"
+    },
+    "imparfait": {
+      "je": "je rendais",
+      "tu": "tu rendais",
+      "il/elle": "il rendait",
+      "nous": "nous rendions",
+      "vous": "vous rendiez",
+      "ils/elles": "ils rendaient"
+    },
+    "futur": {
+      "je": "je rendrai",
+      "tu": "tu rendras",
+      "il/elle": "il rendra",
+      "nous": "nous rendrons",
+      "vous": "vous rendrez",
+      "ils/elles": "ils rendront"
+    },
+    "passé composé": {
+      "je": "j'ai rendu",
+      "tu": "tu as rendu",
+      "il/elle": "il a rendu",
+      "nous": "nous avons rendu",
+      "vous": "vous avez rendu",
+      "ils/elles": "ils ont rendu"
+    }
+  },
+  "manger": {
+    "présent": {
+      "je": "je mange",
+      "tu": "tu manges",
+      "il/elle": "il mange",
+      "nous": "nous mangeons",
+      "vous": "vous mangez",
+      "ils/elles": "ils mangent"
+    },
+    "imparfait": {
+      "je": "je mangeais",
+      "tu": "tu mangeais",
+      "il/elle": "il mangeait",
+      "nous": "nous mangions",
+      "vous": "vous mangiez",
+      "ils/elles": "ils mangeaient"
+    },
+    "futur": {
+      "je": "je mangerai",
+      "tu": "tu mangeras",
+      "il/elle": "il mangera",
+      "nous": "nous mangerons",
+      "vous": "vous mangerez",
+      "ils/elles": "ils mangeront"
+    },
+    "passé composé": {
+      "je": "j'ai mangé",
+      "tu": "tu as mangé",
+      "il/elle": "il a mangé",
+      "nous": "nous avons mangé",
+      "vous": "vous avez mangé",
+      "ils/elles": "ils ont mangé"
+    }
+  },
+  "commencer": {
+    "présent": {
+      "je": "je commence",
+      "tu": "tu commences",
+      "il/elle": "il commence",
+      "nous": "nous commençons",
+      "vous": "vous commencez",
+      "ils/elles": "ils commencent"
+    },
+    "imparfait": {
+      "je": "je commençais",
+      "tu": "tu commençais",
+      "il/elle": "il commençait",
+      "nous": "nous commencions",
+      "vous": "vous commenciez",
+      "ils/elles": "ils commençaient"
+    },
+    "futur": {
+      "je": "je commencerai",
+      "tu": "tu commenceras",
+      "il/elle": "il commencera",
+      "nous": "nous commencerons",
+      "vous": "vous commencerez",
+      "ils/elles": "ils commenceront"
+    },
+    "passé composé": {
+      "je": "j'ai commencé",
+      "tu": "tu as commencé",
+      "il/elle": "il a commencé",
+      "nous": "nous avons commencé",
+      "vous": "vous avez commencé",
+      "ils/elles": "ils ont commencé"
+    }
+  },
+  "mettre": {
+    "présent": {
+      "je": "je mets",
+      "tu": "tu mets",
+      "il/elle": "il met",
+      "nous": "nous mettons",
+      "vous": "vous mettez",
+      "ils/elles": "ils mettent"
+    },
+    "imparfait": {
+      "je": "je mettais",
+      "tu": "tu mettais",
+      "il/elle": "il mettait",
+      "nous": "nous mettions",
+      "vous": "vous mettiez",
+      "ils/elles": "ils mettaient"
+    },
+    "futur": {
+      "je": "je mettrai",
+      "tu": "tu mettras",
+      "il/elle": "il mettra",
+      "nous": "nous mettrons",
+      "vous": "vous mettrez",
+      "ils/elles": "ils mettront"
+    },
+    "passé composé": {
+      "je": "j'ai mis",
+      "tu": "tu as mis",
+      "il/elle": "il a mis",
+      "nous": "nous avons mis",
+      "vous": "vous avez mis",
+      "ils/elles": "ils ont mis"
+    }
+  },
+  "pouvoir": {
+    "présent": {
+      "je": "je peux",
+      "tu": "tu peux",
+      "il/elle": "il peut",
+      "nous": "nous pouvons",
+      "vous": "vous pouvez",
+      "ils/elles": "ils peuvent"
+    },
+    "imparfait": {
+      "je": "je pouvais",
+      "tu": "tu pouvais",
+      "il/elle": "il pouvait",
+      "nous": "nous pouvions",
+      "vous": "vous pouviez",
+      "ils/elles": "ils pouvaient"
+    },
+    "futur": {
+      "je": "je pourrai",
+      "tu": "tu pourras",
+      "il/elle": "il pourra",
+      "nous": "nous pourrons",
+      "vous": "vous pourrez",
+      "ils/elles": "ils pourront"
+    },
+    "passé composé": {
+      "je": "j'ai pu",
+      "tu": "tu as pu",
+      "il/elle": "il a pu",
+      "nous": "nous avons pu",
+      "vous": "vous avez pu",
+      "ils/elles": "ils ont pu"
+    }
+  },
+  "oublier": {
+    "présent": {
+      "je": "j'oublie",
+      "tu": "tu oublies",
+      "il/elle": "il oublie",
+      "nous": "nous oublions",
+      "vous": "vous oubliez",
+      "ils/elles": "ils oublient"
+    },
+    "imparfait": {
+      "je": "j'oubliais",
+      "tu": "tu oubliais",
+      "il/elle": "il oubliait",
+      "nous": "nous oubliions",
+      "vous": "vous oubliiez",
+      "ils/elles": "ils oubliaient"
+    },
+    "futur": {
+      "je": "j'oublierai",
+      "tu": "tu oublieras",
+      "il/elle": "il oubliera",
+      "nous": "nous oublierons",
+      "vous": "vous oublierez",
+      "ils/elles": "ils oublieront"
+    },
+    "passé composé": {
+      "je": "j'ai oublié",
+      "tu": "tu as oublié",
+      "il/elle": "il a oublié",
+      "nous": "nous avons oublié",
+      "vous": "vous avez oublié",
+      "ils/elles": "ils ont oublié"
+    }
+  },
+  "prendre": {
+    "présent": {
+      "je": "je prends",
+      "tu": "tu prends",
+      "il/elle": "il prend",
+      "nous": "nous prenons",
+      "vous": "vous prenez",
+      "ils/elles": "ils prennent"
+    },
+    "imparfait": {
+      "je": "je prenais",
+      "tu": "tu prenais",
+      "il/elle": "il prenait",
+      "nous": "nous prenions",
+      "vous": "vous preniez",
+      "ils/elles": "ils prenaient"
+    },
+    "futur": {
+      "je": "je prendrai",
+      "tu": "tu prendras",
+      "il/elle": "il prendra",
+      "nous": "nous prendrons",
+      "vous": "vous prendrez",
+      "ils/elles": "ils prendront"
+    },
+    "passé composé": {
+      "je": "j'ai pris",
+      "tu": "tu as pris",
+      "il/elle": "il a pris",
+      "nous": "nous avons pris",
+      "vous": "vous avez pris",
+      "ils/elles": "ils ont pris"
+    }
+  },
+  "sortir": {
+    "présent": {
+      "je": "je sors",
+      "tu": "tu sors",
+      "il/elle": "il sort",
+      "nous": "nous sortons",
+      "vous": "vous sortez",
+      "ils/elles": "ils sortent"
+    },
+    "imparfait": {
+      "je": "je sortais",
+      "tu": "tu sortais",
+      "il/elle": "il sortait",
+      "nous": "nous sortions",
+      "vous": "vous sortiez",
+      "ils/elles": "ils sortaient"
+    },
+    "futur": {
+      "je": "je sortirai",
+      "tu": "tu sortiras",
+      "il/elle": "il sortira",
+      "nous": "nous sortirons",
+      "vous": "vous sortirez",
+      "ils/elles": "ils sortiront"
+    },
+    "passé composé": {
+      "je": "je suis sorti",
+      "tu": "tu es sorti",
+      "il/elle": "il est sorti",
+      "nous": "nous sommes sortis",
+      "vous": "vous êtes sortis",
+      "ils/elles": "ils sont sortis"
+    }
+  },
+  "courir": {
+    "présent": {
+      "je": "je cours",
+      "tu": "tu cours",
+      "il/elle": "il court",
+      "nous": "nous courons",
+      "vous": "vous courez",
+      "ils/elles": "ils courent"
+    },
+    "imparfait": {
+      "je": "je courais",
+      "tu": "tu courais",
+      "il/elle": "il courait",
+      "nous": "nous courions",
+      "vous": "vous couriez",
+      "ils/elles": "ils couraient"
+    },
+    "futur": {
+      "je": "je courrai",
+      "tu": "tu courras",
+      "il/elle": "il courra",
+      "nous": "nous courrons",
+      "vous": "vous courrez",
+      "ils/elles": "ils courront"
+    },
+    "passé composé": {
+      "je": "j'ai couru",
+      "tu": "tu as couru",
+      "il/elle": "il a couru",
+      "nous": "nous avons couru",
+      "vous": "vous avez couru",
+      "ils/elles": "ils ont couru"
+    }
+  },
+  "voir": {
+    "présent": {
+      "je": "je vois",
+      "tu": "tu vois",
+      "il/elle": "il voit",
+      "nous": "nous voyons",
+      "vous": "vous voyez",
+      "ils/elles": "ils voient"
+    },
+    "imparfait": {
+      "je": "je voyais",
+      "tu": "tu voyais",
+      "il/elle": "il voyait",
+      "nous": "nous voyions",
+      "vous": "vous voyiez",
+      "ils/elles": "ils voyaient"
+    },
+    "futur": {
+      "je": "je verrai",
+      "tu": "tu verras",
+      "il/elle": "il verra",
+      "nous": "nous verrons",
+      "vous": "vous verrez",
+      "ils/elles": "ils verront"
+    },
+    "passé composé": {
+      "je": "j'ai vu",
+      "tu": "tu as vu",
+      "il/elle": "il a vu",
+      "nous": "nous avons vu",
+      "vous": "vous avez vu",
+      "ils/elles": "ils ont vu"
+    }
+  },
+  "venir": {
+    "présent": {
+      "je": "je viens",
+      "tu": "tu viens",
+      "il/elle": "il vient",
+      "nous": "nous venons",
+      "vous": "vous venez",
+      "ils/elles": "ils viennent"
+    },
+    "imparfait": {
+      "je": "je venais",
+      "tu": "tu venais",
+      "il/elle": "il venait",
+      "nous": "nous venions",
+      "vous": "vous veniez",
+      "ils/elles": "ils venaient"
+    },
+    "futur": {
+      "je": "je viendrai",
+      "tu": "tu viendras",
+      "il/elle": "il viendra",
+      "nous": "nous viendrons",
+      "vous": "vous viendrez",
+      "ils/elles": "ils viendront"
+    },
+    "passé composé": {
+      "je": "je suis venu",
+      "tu": "tu es venu",
+      "il/elle": "il est venu",
+      "nous": "nous sommes venus",
+      "vous": "vous êtes venus",
+      "ils/elles": "ils sont venus"
+    }
+  }
+}
