@@ -89,6 +89,58 @@ st.markdown("""
         color: #581c87 !important;
         border: 3px solid #c084fc;
     }
+
+    /* --- Responsive: tablet --- */
+    @media (max-width: 768px) {
+        .result-box {
+            padding: 1.5rem 1rem !important;
+        }
+        .result-box div[style*="font-size:3rem"] {
+            font-size: 2.5rem !important;
+        }
+        .result-box div[style*="font-size:1.8rem"] {
+            font-size: 1.4rem !important;
+        }
+        .error-box {
+            padding: 1rem !important;
+            font-size: 1rem !important;
+        }
+        .error-box * {
+            font-size: 1rem !important;
+        }
+    }
+
+    /* --- Responsive: phone --- */
+    @media (max-width: 480px) {
+        .result-box {
+            padding: 1.2rem 0.8rem !important;
+            border-radius: 14px !important;
+        }
+        .result-box div[style*="font-size:3rem"] {
+            font-size: 2rem !important;
+        }
+        .result-box div[style*="font-size:1.8rem"] {
+            font-size: 1.2rem !important;
+        }
+        .result-box div[style*="font-size:1.4rem"] {
+            font-size: 1.1rem !important;
+        }
+        .error-box {
+            padding: 0.8rem !important;
+            font-size: 0.95rem !important;
+            border-radius: 10px !important;
+        }
+        .error-box * {
+            font-size: 0.95rem !important;
+        }
+        .question-card {
+            padding: 1.2rem !important;
+            font-size: 1.3rem !important;
+        }
+        .big-title, .big-title * {
+            font-size: 1.8rem !important;
+        }
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -530,25 +582,21 @@ def show_results():
     st.write("")
     st.write("")
 
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        if st.button("🔄 Recommencer", use_container_width=True):
-            generate_questions(
-                st.session_state.selected_verbs,
-                st.session_state.get("selected_temps", TEMPS),
-                st.session_state.get("nb_questions", 20)
-            )
-            st.session_state.mode = "quiz"
-            st.rerun()
-    with col2:
-        if st.button("📚 Autres verbes", use_container_width=True):
-            st.session_state.mode = "selection"
-            st.session_state.select_all = False
-            st.rerun()
-    with col3:
-        if st.button("🏠 Accueil", use_container_width=True):
-            st.session_state.mode = "accueil"
-            st.rerun()
+    if st.button("🔄 Recommencer", use_container_width=True):
+        generate_questions(
+            st.session_state.selected_verbs,
+            st.session_state.get("selected_temps", TEMPS),
+            st.session_state.get("nb_questions", 20)
+        )
+        st.session_state.mode = "quiz"
+        st.rerun()
+    if st.button("📚 Autres verbes", use_container_width=True):
+        st.session_state.mode = "selection"
+        st.session_state.select_all = False
+        st.rerun()
+    if st.button("🏠 Accueil", use_container_width=True):
+        st.session_state.mode = "accueil"
+        st.rerun()
 
 
 # ============================================================
